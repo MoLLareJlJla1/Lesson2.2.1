@@ -16,10 +16,9 @@ public class User {
     @Column(name = "last_name")
     private String lastName;
 
-    @Column(name = "email")
+
     private String email;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn()
     private Car car;
 
 
@@ -75,11 +74,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "\n" + "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+        return "\n" + "User{" + "id=" + id + ", firstName='" + firstName +
+                ", lastName='" + lastName +
+                ", email='" + email +
                 ", car=" + car +
                 '}';
     }

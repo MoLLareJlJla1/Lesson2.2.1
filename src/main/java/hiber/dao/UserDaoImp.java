@@ -2,6 +2,7 @@ package hiber.dao;
 
 import hiber.model.Car;
 import hiber.model.User;
+import lombok.AllArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.hibernate.sql.Select;
@@ -12,9 +13,9 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
+@AllArgsConstructor
 public class UserDaoImp implements UserDao {
 
-    @Autowired
     private SessionFactory sessionFactory;
 
     @Override
